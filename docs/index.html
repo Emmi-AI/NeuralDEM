@@ -68,14 +68,18 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">NeuralDEM – Real-time Simulation of Industrial Particulate Flows</h1>
-            <p class="subtitle is-5 publication-subtitle">
-              Benedikt Alkin <sup>&dagger;, *, 1, 2</sup>, 
-              Tobias Kronlachner <sup>&dagger;, *, 1, 3</sup>, 
-              Samuele Papa <sup>&dagger;, 1, 4, 5</sup>, <br/> 
-              Stefan Pirker <sup>3</sup>, 
-              Thomas Lichtenegger <sup>1, 3</sup>, 
-              Johannes Brandstetter <sup>@, 1, 2</sup>
+            <div class="subtitle is-5 publication-subtitle">
+              <p>
+              <span style="display: inline-block;">Benedikt Alkin <sup>&dagger;, *, 1, 2</sup></span>, 
+              <span style="display: inline-block;">Tobias Kronlachner <sup>&dagger;, *, 1, 3</sup>, </span>
+              <span style="display: inline-block;">Samuele Papa <sup>&dagger;, 1, 4, 5</sup>, </span>
             </p>
+            <p>
+              <span style="display: inline-block;">Stefan Pirker <sup>3</sup>, </span>
+              <span style="display: inline-block;">Thomas Lichtenegger <sup>1, 3</sup>, </span>
+              <span style="display: inline-block;">Johannes Brandstetter <sup>@, 1, 2</sup></span>
+            </p>
+            </div>
             <p class="subtitle is-6 publication-subtitle">
               <sup>&dagger;</sup> core contributor, <sup>*</sup> equal contribution <br/>
               <sup>1</sup> NXAI GmbH, Linz, Austria <br/>
@@ -173,11 +177,52 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <video poster="" id="hopper_gt" autoplay controls muted loop height="100%">
-          <!-- Your video here -->
-          <source src="static/videos/hopper_videos/hopper122.mp4"
-          type="video/mp4">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3">NeuralDEM: the method</h2>
+        <figure class="image is-5by4">
+          <img src="static/images/main_figures/figure_3.png" alt="NeuralDEM method">
+        </figure>
+        <div class="content has-text-justified">
+        <p>
+          NeuralDEM presents the first end-to-end solution for replacing computationally intensive numerical DEM routines and coupled 
+          DEM-CFD simulations with fast and flexible deep learning surrogates. 
+          NeuralDEM introduces two conceptually novel modeling paradigms:
+        </p>
+        <ol>
+          <li><strong>Physics representation</strong>: 
+            We model the Lagrangian discretization of DEM as an underlying continuous field, while simultaneously modeling macroscopic 
+            behavior directly as additional auxiliary fields. NeuralDEM encodes different physics inputs which are representative for
+            DEM dynamics and/or multi-physics scenarios. Examples are particle displacement, particle mixing, solid fraction, or particle transport.</li>
+          <li><strong>Multi-branch neural operators</strong>: We introduce multi-branch neural operators scalable to real-time 
+            modeling of industrially-sized scenarios. Multi-branch neural operators build on the flexible and scalable 
+          "<em>Universal Physics Transformer</em>" framework by enriching encoder, decoder, and approximator components with multi-branch transformers to model microscopic properties of single- or multi-physics systems by tightly coupling the different physics phases fundamental to predicting the evolution of the system within <em>main-branches</em>. Additionally, auxiliary <em>off-branches</em> are added to directly model macroscopic insights by retrieving information from the microscopic simulation state and refining it within the off-branch.</li>
+        </ol>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Hopper: draining.</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Mass flow</h2></div>
+    <div class="columns is-mobile is-centered has-text-centered">
+      <div class="column is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">DEM</h3>
+      </div>
+      <div class="column is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">NeuralDEM</h3>
+      </div>
+    </div>
+    <div class="content is-max-desktop has-text-centered">
+      <video poster="" id="hopper_gt" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/hopper_videos/hopper122.mp4"
+        type="video/mp4">
+      </video>
+      <div class="content is-max-desktop has-text-justified">
+        <p><strong>Video 1: </strong>Rollouts of the hopper with high angle, which causes the system to exhibit mass flow, where the particles exit the hopper in the order in which they were filled.</p>
       </div>
     </div>
   </div>
