@@ -216,14 +216,17 @@
       </div>
     </div>
     <div class="content is-max-desktop has-text-centered">
-      <video poster="" id="hopper_gt" autoplay controls muted loop height="100%">
-        <source src="static/videos/hopper_videos/hopper122.mp4"
+      <video poster="" id="hopper_mass" autoplay controls muted loop height="100%">
+        <source src="static/videos/hopper_videos/hopper122_cropped.mp4"
         type="video/mp4">
       </video>
-      <div class="content is-max-desktop has-text-justified">
-        <p><strong>Video 1: </strong>Rollouts of the hopper with high angle, which causes the system to exhibit mass flow, where the particles exit the hopper in the order in which they were filled.</p>
-      </div>
+
     </div>
+    <div class="message is-info">
+      <div class="message-body">
+          <p>The hopper here has a high angle, which causes the system to exhibit mass flow, where the particles exit the hopper in the order in which they were filled.</p>
+        </div>
+      </div>
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Funnel flow</h2></div>
     <div class="columns is-mobile is-centered has-text-centered">
       <div class="column is-half-desktop is-half-mobile">
@@ -234,12 +237,14 @@
       </div>
     </div>
     <div class="content is-max-desktop has-text-centered">
-      <video poster="" id="hopper_gt" autoplay controls muted loop height="100%">
-        <source src="static/videos/hopper_videos/hopper122.mp4"
+      <video poster="" id="hopper_funnel" autoplay controls muted loop height="100%">
+        <source src="static/videos/hopper_videos/hopper300.mp4"
         type="video/mp4">
       </video>
-      <div class="content is-max-desktop has-text-justified">
-        <p><strong>Video 1: </strong>Rollouts of the hopper with high angle, which causes the system to exhibit mass flow, where the particles exit the hopper in the order in which they were filled.</p>
+    </div>
+    <div class="message is-info">
+      <div class="message-body">
+        <p>With long angle, instead, the hopper causes mass flow. The particles at the top exit the hopper before those below them.</p>
       </div>
     </div>
   </div>
@@ -274,8 +279,84 @@
         <p>Fast inlet velocity</p>
       </div>
     </div>  
-    <div class="content is-max-desktop has-text-justified">
-      <p><strong>Video 2: </strong>Particle mixing behavior modeled by NeuralDEM. The slow inlet velocity simulation shows the slow mixing, notice here that the purple particles appear at the bad of the fluidized bed towards the end of the simulation. For high inlet velocity the particle </p>
+    <div class="message is-info">
+      <div class="message-body">
+      <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: short rollouts</h2></div>
+    
+    <!-- <div class="columns is-mobile is-centered has-text-centered">
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Slow inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Medium inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Fast inlet velocity</h3>
+      </div>
+    </div> -->
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Low inlet velocity</h2></div>
+    <div class="columns is-mobile is-max-desktop has-text-centered">
+      <div class="column has-text-centered is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">CFD-DEM</h3>
+        <video poster="" id="matrix_8562_04_gt" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/matrix/8562_04_gt.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column has-text-centered is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">NeuralDEM</h3>
+        <video poster="" id="matrix_8562_04_ml" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/matrix/8562_04_ml.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+    </div> 
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Medium inlet velocity</h2></div>
+    <div class="columns is-mobile is-max-desktop has-text-centered">
+      <div class="column has-text-centered is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">CFD-DEM</h3>
+        <video poster="" id="matrix_8562_32_gt" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/matrix/8562_32_gt.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column has-text-centered is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">NeuralDEM</h3>
+        <video poster="" id="matrix_8562_32_ml" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/matrix/8562_32_ml.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+    </div> 
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Fast inlet velocity</h2></div>
+    <div class="columns is-mobile is-max-desktop has-text-centered">
+      <div class="column has-text-centered is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">CFD-DEM</h3>
+        <video poster="" id="matrix_8562_75_gt" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/matrix/8562_75_gt.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column has-text-centered is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">NeuralDEM</h3>
+        <video poster="" id="matrix_8562_75_ml" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/matrix/8562_75_ml.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+    </div>  
+    <div class="message is-info">
+      <div class="message-body">
+        <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -298,25 +379,33 @@
     <div class="columns is-mobile is-max-desktop has-text-centered">
       <div class="column has-text-centered">
         <video poster="" id="fluidized_bed_mixing_slow" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/mixing/8562_04_title_subtitle.mp4"
+          <source src="static/videos/fluidized_bed_videos/mixing/8562_04_cropped_new_plot_size_title_subtitle.mp4"
           type="video/mp4">
         </video>
       </div>
       <div class="column has-text-centered">
         <video poster="" id="fluidized_bed_mixing_fast" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/mixing/8562_32_title_subtitle.mp4"
+          <source src="static/videos/fluidized_bed_videos/mixing/8562_32_cropped_new_plot_size_title_subtitle.mp4"
           type="video/mp4">
         </video>
       </div>
       <div class="column has-text-centered">
         <video poster="" id="fluidized_bed_mixing_fast" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/mixing/8562_75_title_subtitle.mp4"
+          <source src="static/videos/fluidized_bed_videos/mixing/8562_75_cropped_new_plot_size_title_subtitle.mp4"
           type="video/mp4">
         </video>
       </div>
     </div>  
-    <div class="content is-max-desktop has-text-justified">
-      <p><strong>Video 2: </strong>Particle mixing behavior modeled by NeuralDEM. The slow inlet velocity simulation shows the slow mixing, notice here that the purple particles appear at the bad of the fluidized bed towards the end of the simulation. For high inlet velocity the particle </p>
+    <div class="message is-info">
+      <div class="message-body">
+        <p><strong>Particle mixing</strong> behavior modeled by NeuralDEM.</p>
+        <p>The slow inlet velocity simulation shows slow mixing, and NeuralDEM can match the same mixing rate (the two lines are overlapping). <em>Notice here that the purple particles appear at the bad of the fluidized bed towards the end of the simulation</em>.</p>
+        <p>For high inlet velocity the particle mixing more quickly rises at the beginning, slowing down towards the end. The model matches the prediction very well.</p>
+        <p>These simulations are run for 3s real-time (or 300 machine learning timesteps) and are here slowed-down to last 15s. Additionally, we want to note that the particle mixing is not a time-averaged statistic, so it is strongly dependent on the exact bubbles and position of the particles. We do not expect
+          the model to be able to match the CFD-DEM particle mixing curve exactly, but only to do that at the beginning of the simulation. After a few tens of steps, the system is chaotic enough that divergence caused by numerical
+          differences are expected.
+        </p>
+      </div>
     </div>
   </div>
 </section>
