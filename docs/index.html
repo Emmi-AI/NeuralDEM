@@ -161,7 +161,7 @@
   </div>
 </section>
 <!-- End paper abstract -->
-<button class="btn" id="btn1" onclick="showText()">DEM or NeuralDEM?</button>
+<!-- <button class="btn" id="btn1" onclick="showText()">DEM or NeuralDEM?</button>
 
 <script>
   function showText() {
@@ -172,7 +172,7 @@
       button.textContent = "DEM or NeuralDEM?";
     }
   }
-</script>
+</script> -->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -205,8 +205,26 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Hopper: draining.</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Hopper: draining</h2></div>
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Mass flow</h2></div>
+    <div class="columns is-mobile is-centered has-text-centered">
+      <div class="column is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">DEM</h3>
+      </div>
+      <div class="column is-half-desktop is-half-mobile">
+        <h3 class="subtitle is-4">NeuralDEM</h3>
+      </div>
+    </div>
+    <div class="content is-max-desktop has-text-centered">
+      <video poster="" id="hopper_gt" autoplay controls muted loop height="100%">
+        <source src="static/videos/hopper_videos/hopper122.mp4"
+        type="video/mp4">
+      </video>
+      <div class="content is-max-desktop has-text-justified">
+        <p><strong>Video 1: </strong>Rollouts of the hopper with high angle, which causes the system to exhibit mass flow, where the particles exit the hopper in the order in which they were filled.</p>
+      </div>
+    </div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Funnel flow</h2></div>
     <div class="columns is-mobile is-centered has-text-centered">
       <div class="column is-half-desktop is-half-mobile">
         <h3 class="subtitle is-4">DEM</h3>
@@ -229,44 +247,74 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: mixing.</h2></div>
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Mass flow</h2></div>
-    <div class="columns is-mobile is-centered has-text-centered">
-      <div class="column is-half-desktop is-half-mobile">
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: long term statistics</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div>
+    <!-- <div class="columns is-mobile is-centered has-text-centered">
+      <div class="column is-half-desktop is-one-third-mobile">
         <h3 class="subtitle is-4">Slow inlet velocity</h3>
       </div>
-      <div class="column is-half-desktop is-half-mobile">
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Medium inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
         <h3 class="subtitle is-4">Fast inlet velocity</h3>
       </div>
+    </div> -->
+    <div class="columns is-mobile is-max-desktop has-text-centered">
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="static/images/fluidized_bed/long_solid_fraction_mean_slow@2x.png" alt="Fluidized bed statistics - slow inlet velocity">
+        </figure>
+        <p>Slow inlet velocity</p>
+      </div>
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="static/images/fluidized_bed/long_solid_fraction_mean_fast@2x.png" alt="Fluidized bed statistics - fast inlet velocity">
+        </figure>
+        <p>Fast inlet velocity</p>
+      </div>
+    </div>  
+    <div class="content is-max-desktop has-text-justified">
+      <p><strong>Video 2: </strong>Particle mixing behavior modeled by NeuralDEM. The slow inlet velocity simulation shows the slow mixing, notice here that the purple particles appear at the bad of the fluidized bed towards the end of the simulation. For high inlet velocity the particle </p>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: mixing</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div>
+    <!-- <div class="columns is-mobile is-centered has-text-centered">
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Slow inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Medium inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Fast inlet velocity</h3>
+      </div>
+    </div> -->
     <div class="columns is-mobile is-max-desktop has-text-centered">
       <div class="column has-text-centered">
         <video poster="" id="fluidized_bed_mixing_slow" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/fb_mix_04_8562.mp4"
+          <source src="static/videos/fluidized_bed_videos/mixing/8562_04_title_subtitle.mp4"
           type="video/mp4">
         </video>
       </div>
       <div class="column has-text-centered">
         <video poster="" id="fluidized_bed_mixing_fast" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/fb_mix_75_8562.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <div class="columns is-mobile is-max-desktop has-text-centered">
-      <div class="column has-text-centered">
-        <video poster="" id="fluidized_bed_mixing_slow_plot" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/lacey_lacey_index_job_8562_run_04.mp4"
+          <source src="static/videos/fluidized_bed_videos/mixing/8562_32_title_subtitle.mp4"
           type="video/mp4">
         </video>
       </div>
       <div class="column has-text-centered">
-        <video poster="" id="fluidized_bed_mixing_fast_plot" autoplay controls muted loop height="100%">
-          <source src="static/videos/fluidized_bed_videos/lacey_lacey_index_job_8562_run_75.mp4"
+        <video poster="" id="fluidized_bed_mixing_fast" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/mixing/8562_75_title_subtitle.mp4"
           type="video/mp4">
         </video>
       </div>
-    </div>    
+    </div>  
     <div class="content is-max-desktop has-text-justified">
       <p><strong>Video 2: </strong>Particle mixing behavior modeled by NeuralDEM. The slow inlet velocity simulation shows the slow mixing, notice here that the purple particles appear at the bad of the fluidized bed towards the end of the simulation. For high inlet velocity the particle </p>
     </div>
