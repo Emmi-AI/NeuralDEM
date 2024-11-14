@@ -7,7 +7,7 @@ body {
   cursor:default;
 }
 
-.hidden-text:hover {
+.hidden-text-container:hover .hidden-text {
   color: black;
   cursor: default;
 }
