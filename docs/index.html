@@ -261,8 +261,21 @@ Additionally, auxiliary <em>off-branches</em> can be added to directly model mac
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: long term statistics</h2></div>
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed</h2></div>
+    <div class="content has-text-justified">
+          <p>
+            Fluidized bed reactors are characterized by fast and transient phenomena and are widely used in
+industry for a variety of processes. Fluidized bed reactors showcase strong interactions of the par-
+ticles with the surrounding fluid, necessitating an accurate modeling of particles, the gas phase, as
+well as particle-gas interactions. Thus, modeling approaches need to combine DEM parts with sim-
+ulations of the surrounding fluid. For simulation, we use a coupled CFD-DEM approach
+which is built upon LIGGGHTS and OpenFOAM.  The reactor is filled with
+500k particles and the fluid, i.e., air, that is uniformly pushed into the reactor from the bottom is
+modeled on a grid of 160k hexahedral cells
+          </p>
+    </div>
+
+   
     <!-- <div class="columns is-mobile is-centered has-text-centered">
       <div class="column is-half-desktop is-one-third-mobile">
         <h3 class="subtitle is-4">Slow inlet velocity</h3>
@@ -274,25 +287,6 @@ Additionally, auxiliary <em>off-branches</em> can be added to directly model mac
         <h3 class="subtitle is-4">Fast inlet velocity</h3>
       </div>
     </div> -->
-    <div class="columns is-mobile is-max-desktop has-text-centered">
-      <div class="column has-text-centered">
-        <figure class="image">
-          <img src="static/images/fluidized_bed/long_solid_fraction_mean_slow@2x.png" alt="Fluidized bed statistics - slow inlet velocity">
-        </figure>
-        <p>Slow inlet velocity</p>
-      </div>
-      <div class="column has-text-centered">
-        <figure class="image">
-          <img src="static/images/fluidized_bed/long_solid_fraction_mean_fast@2x.png" alt="Fluidized bed statistics - fast inlet velocity">
-        </figure>
-        <p>Fast inlet velocity</p>
-      </div>
-    </div>
-    <div class="message is-info">
-      <div class="message-body">
-        <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
-      </div>
-    </div>
     <div class="columns is-mobile is-max-desktop has-text-centered">
       <div class="column has-text-centered">
         <h3 class="subtitle is-4">CFD-DEM</h3>
@@ -330,18 +324,46 @@ Additionally, auxiliary <em>off-branches</em> can be added to directly model mac
           </div>
         </div>
       </div>
-    </div>  
+    </div>
+
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Fluidized bed: long term statistics</h2></div>
+    <div class="content has-text-justified">
+      <p>
+    A fluidized bed reactor simulation exhibits fast and transient dynamics with many physically pos-
+sible trajectories, i.e., fluidized bed reactor trajectories are chaotic. This means that – also for nu-
+merical solvers – starting a fluidized bed simulation with different initial particle packings will yield
+different trajectories. Still, in the limit of long simulation trajectories, different initial packings do
+not affect the temporal statistics.
+      </p>
+    </div>
+
+    <div class="columns is-mobile is-max-desktop has-text-centered">
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="static/images/fluidized_bed/long_solid_fraction_mean_slow@2x.png" alt="Fluidized bed statistics - slow inlet velocity">
+        </figure>
+        <p>Slow inlet velocity</p>
+      </div>
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="static/images/fluidized_bed/long_solid_fraction_mean_fast@2x.png" alt="Fluidized bed statistics - fast inlet velocity">
+        </figure>
+        <p>Fast inlet velocity</p>
+      </div>
+    </div>
     <div class="message is-info">
       <div class="message-body">
-      <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+        <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+      </div>
     </div>
-    </div>
+      
+    
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: short rollouts</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Fluidized bed: rollouts for different inlet velocity</h2></div>
     
     <!-- <div class="columns is-mobile is-centered has-text-centered">
       <div class="column is-half-desktop is-one-third-mobile">
