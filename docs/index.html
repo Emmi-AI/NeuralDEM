@@ -234,7 +234,7 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="content is-max-desktop has-text-centered">
-        <h2 class="title is-3">Hopper: draining setting</h2>
+        <h2 class="title is-3">Hopper discharge</h2>
       </div>
       <div class="content has-text-justified">
         <p>
@@ -302,11 +302,11 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="content is-max-desktop has-text-centered">
-        <h2 class="title is-3">Hopper: physics validation and macroscopic quantities</h2>
+        <h2 class="title is-3">Physics validation and macroscopic quantities</h2>
       </div>
       <div class="content has-text-justified">
         <p>
-          Most macrscopic quantities of interest to engineering applications emerge from the microscopic
+          Most macroscopic quantities of interest to engineering applications emerge from the microscopic
           particle-particle
           interactions modeled by DEM. To re-generate these emerging phenomena with NeuralDEM, we train our model to
           predict
@@ -314,7 +314,7 @@
         </p>
       </div>
       <div class="content is-max-desktop has-text-centered">
-        <h2 class="title is-4">Layer inversion</h2>
+        <h2 class="title is-4">Flow regime</h2>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="column is-half-desktop">
@@ -338,7 +338,7 @@
         </div>
       </div>
       <div class="content is-max-desktop has-text-centered">
-        <h2 class="title is-4">Macroscopic quantities</h2>
+        <h2 class="title is-4">Global quantities</h2>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="column">
@@ -375,9 +375,8 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="content is-max-desktop has-text-centered">
-        <h2 class="title is-3">Fluidized bed: NeuralDEM simulation stability</h2>
+        <h2 class="title is-3">Fluidized bed reactors</h2>
       </div>
-      <!-- <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div> -->
       <div class="content has-text-justified">
         <p>
           Fluidized bed reactors are characterized by fast and transient phenomena and are widely used in industry for a
@@ -391,40 +390,6 @@
           modeled
           on a grid of 160k hexahedral cells.
         </p>
-      </div>
-      <!-- <div class="columns is-mobile is-centered has-text-centered">
-      <div class="column is-half-desktop is-one-third-mobile">
-        <h3 class="subtitle is-4">Slow inlet velocity</h3>
-      </div>
-      <div class="column is-half-desktop is-one-third-mobile">
-        <h3 class="subtitle is-4">Medium inlet velocity</h3>
-      </div>
-      <div class="column is-half-desktop is-one-third-mobile">
-        <h3 class="subtitle is-4">Fast inlet velocity</h3>
-      </div>
-    </div> -->
-      <div class="columns is-mobile is-max-desktop has-text-centered">
-        <div class="column has-text-centered">
-          <figure class="image">
-            <img src="static/images/fluidized_bed/long_solid_fraction_mean_slow@2x.png"
-              alt="Fluidized bed statistics - slow inlet velocity">
-          </figure>
-          <p>Slow inlet velocity</p>
-        </div>
-        <div class="column has-text-centered">
-          <figure class="image">
-            <img src="static/images/fluidized_bed/long_solid_fraction_mean_fast@2x.png"
-              alt="Fluidized bed statistics - fast inlet velocity">
-          </figure>
-          <p>Fast inlet velocity</p>
-        </div>
-      </div>
-      <div class="message is-info">
-        <div class="message-body">
-          <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over
-            the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keeps the same
-            initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
-        </div>
       </div>
       <div class="columns is-max-desktop has-text-centered">
         <div class="column has-text-centered">
@@ -462,6 +427,47 @@
           </div>
         </div>
       </div>
+      <!-- <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div> -->
+      
+      <!-- <div class="columns is-mobile is-centered has-text-centered">
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Slow inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Medium inlet velocity</h3>
+      </div>
+      <div class="column is-half-desktop is-one-third-mobile">
+        <h3 class="subtitle is-4">Fast inlet velocity</h3>
+      </div>
+    </div> -->
+
+    <div class="content is-max-desktop has-text-centered">
+      <h2 class="title is-4">Long-term stability</h2>
+    </div>
+      <div class="columns is-mobile is-max-desktop has-text-centered">
+        <div class="column has-text-centered">
+          <figure class="image">
+            <img src="static/images/fluidized_bed/long_solid_fraction_mean_slow@2x.png"
+              alt="Fluidized bed statistics - slow inlet velocity">
+          </figure>
+          <p>Slow inlet velocity</p>
+        </div>
+        <div class="column has-text-centered">
+          <figure class="image">
+            <img src="static/images/fluidized_bed/long_solid_fraction_mean_fast@2x.png"
+              alt="Fluidized bed statistics - fast inlet velocity">
+          </figure>
+          <p>Fast inlet velocity</p>
+        </div>
+      </div>
+      <div class="message is-info">
+        <div class="message-body">
+          <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over
+            the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keeps the same
+            initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+        </div>
+      </div>
+      
       <div class="message is-info">
         <div class="message-body">
           <p>The iso-surface shows the bubble structure that the model is predicting. Particles in the CFD-DEM
@@ -559,7 +565,7 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="content is-max-desktop has-text-centered">
-        <h2 class="title is-3">Fluidized bed: short rollouts</h2>
+        <h2 class="title is-3">Fluidized bed: Generzation to differet inlet velocities</h2>
       </div>
       <div class="content is-max-desktop has-text-centered">
         <h2 class="title is-4">Low inlet velocity</h2>
