@@ -278,6 +278,49 @@
         </figure>
         <p>Fast inlet velocity</p>
       </div>
+    </div>
+    <div class="message is-info">
+      <div class="message-body">
+        <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+      </div>
+    </div>
+    <div class="columns is-mobile is-max-desktop has-text-centered">
+      <div class="column has-text-centered">
+        <h3 class="subtitle is-4">CFD-DEM</h3>
+        <video poster="" id="hopper_funnel" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/long_rollouts/gt_hstack_compressed.mp4"
+          type="video/mp4">
+        </video>
+        <div class="columns is-mobile is-one-third-mobile  has-text-centered">
+          <div class="column has-text-centered">
+            <p>Particles</p>
+          </div>
+          <div class="column has-text-centered">
+            <p>Solid fraction</p>
+          </div>
+          <div class="column has-text-centered">
+            <p>Fluid velocity</p>
+          </div>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <h3 class="subtitle is-4">NeuralDEM</h3>
+        <video poster="" id="hopper_funnel" autoplay controls muted loop height="100%">
+          <source src="static/videos/fluidized_bed_videos/long_rollouts/ml_hstack_compressed.mp4"
+          type="video/mp4">
+        </video>
+        <div class="columns is-mobile is-one-third-mobile  has-text-centered">
+          <div class="column has-text-centered">
+            <p>Particles</p>
+          </div>
+          <div class="column has-text-centered">
+            <p>Solid fraction</p>
+          </div>
+          <div class="column has-text-centered">
+            <p>Fluid velocity</p>
+          </div>
+        </div>
+      </div>
     </div>  
     <div class="message is-info">
       <div class="message-body">
