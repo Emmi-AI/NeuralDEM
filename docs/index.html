@@ -165,7 +165,7 @@
               First, NeuralDEM treats the Lagrangian discretization of DEM as an underlying continuous field, while
               simultaneously modeling macroscopic behavior directly as additional auxiliary fields.
               Second, NeuralDEM introduces multi-branch neural operators scalable to real-time modeling of
-              industrially-sized scenarios -- from slow and pseudo-steady to fast and transient. Such
+              industrially-sized scenarios &mdash; from slow and pseudo-steady to fast and transient. Such
               scenarios have previously posed insurmountable challenges for deep learning models.
               Notably, our largest NeuralDEM model is able to faithfully model coupled CFD-DEM fluidized bed reactors of
               160k CFD cells and 500k DEM particles for trajectories of 28s,
@@ -243,7 +243,7 @@
           DEM is the preferred method since the air around the particles can usually be neglected due to the slow
           velocities in the system.
           In our experiments, the hopper geometry is filled with 250k particles, which gradually exit the domain over
-          the simulation duration when the hopper empties. Based on the material properties and the geoemtry properties,
+          the simulation duration when the hopper empties. Based on the material properties and the geometry properties,
           different flow regimes are obtained in a hopper.
         </p>
       </div>
@@ -292,7 +292,7 @@
           <p>Contrast the previous simulation with this, where the hopper angle is very shallow. In this scenario, the
             material is likely to exhibit funnnel flow. Then the particles exit the hopper in the middle through a
             funnel built from the particles.
-            This causes that particles at the top exit the hopper before those below them. In this cases there is hardly
+            This causes particles at the top to exit the hopper before those below them. In this cases, there is hardly
             any sliding on the wall as shown by both simulations.</p>
         </div>
       </div>
@@ -310,7 +310,7 @@
           particle-particle
           interactions modeled by DEM. To re-generate these emerging phenomena with NeuralDEM, we train our model to
           predict
-          auxiliary fields at each timestep of the simulation.
+          <em>auxiliary fields</em> at each timestep of the simulation.
         </p>
       </div>
       <div class="content is-max-desktop has-text-centered">
@@ -332,7 +332,7 @@
       </div>
       <div class="message is-info">
         <div class="message-body">
-          <p>When the hopper angle is high, it is very likely that the system exhibits mass flow, where the particles
+          <p>When the hopper angle is high, it is very likely that the system exhibits <em>mass flow</em>, where the particles
             exit the hopper in the order in which they were filled. In this regime the full bulk of particles slides
             down the walls, as clearly visible in the DEM simulation, as well as, in the NeuralDEM trajectory. </p>
         </div>
@@ -362,11 +362,7 @@
       </div>
       <div class="message is-info">
         <div class="message-body">
-          <p>Contrast the previous simulation with this, where the hopper angle is very shallow. In this scenario, the
-            material is likely to exhibit funnnel flow. Then the particles exit the hopper in the middle through a
-            funnel built from the particles.
-            This causes that particles at the top exit the hopper before those below them. In this cases there is hardly
-            any sliding on the wall as shown by both simulations.</p>
+          <p>Macroscopic simulation insights from the predicted occupancy field. The NeuralDEM model can accurately capture macroscopic measurements from the learned dynamics.</p>
         </div>
       </div>
     </div>
@@ -427,6 +423,19 @@
           </div>
         </div>
       </div>
+      <div class="message is-info">
+        <div class="message-body">
+          <p>The iso-surface shows the bubble structure that the model is predicting. Particles in the CFD-DEM
+            simulation shows all 500k particles used. Solid fraction and fluid velocity are shown on the surface of the
+            reactor.
+          </p>
+          <p>A fluidized bed reactor simulation exhibits fast and transient dynamics with many physically possible
+            trajectories, i.e., fluidized bed reactor trajectories are <a href="#chaotic_system">chaotic</a>. This means that &mdash; also for
+            numerical solvers &mdash; starting a fluidized bed simulation with different initial particle packings will
+            yield different trajectories.</p>
+
+        </div>
+      </div>
       <!-- <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div> -->
       
       <!-- <div class="columns is-mobile is-centered has-text-centered">
@@ -468,19 +477,7 @@
         </div>
       </div>
       
-      <div class="message is-info">
-        <div class="message-body">
-          <p>The iso-surface shows the bubble structure that the model is predicting. Particles in the CFD-DEM
-            simulation shows all 500k particles used. Solid fraction and fluid velocity are shown on the surface of the
-            reactor.
-          </p>
-          <p>A fluidized bed reactor simulation exhibits fast and transient dynamics with many physically possible
-            trajectories, i.e., fluidized bed reactor trajectories are <a href="#chaotic_system">chaotic</a>. This means that &mdash; also for
-            numerical solvers &mdash; starting a fluidized bed simulation with different initial particle packings will
-            yield different trajectories.</p>
 
-        </div>
-      </div>
     </div>
   </section>
 
@@ -620,10 +617,9 @@
       </div>
       <div class="message is-info">
         <div class="message-body">
-          <p>NeuralDEM simulation are indistinguishable from </p>
-          <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over
-            the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keeps the same
-            initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+          <p>With slow inlet velocity the particles still exhibit a fluidized behavior, with bubbling cearly displayed. Instead, 
+            with higher inlet velocities the particles are more turbulent and the fluidized bed is more chaotic. 
+            NeuralDEM is capable of capturing all regimes.</p>
         </div>
       </div>
     </div>
