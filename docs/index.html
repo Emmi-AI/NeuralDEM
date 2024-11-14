@@ -309,8 +309,7 @@
           Most macroscopic quantities of interest to engineering applications emerge from the microscopic
           particle-particle
           interactions modeled by DEM. To re-generate these emerging phenomena with NeuralDEM, we train our model to
-          predict
-          <em>auxiliary fields</em> at each timestep of the simulation.
+          predict auxiliary fields at each timestep of the simulation.
         </p>
       </div>
       <div class="content is-max-desktop has-text-centered">
@@ -332,9 +331,10 @@
       </div>
       <div class="message is-info">
         <div class="message-body">
-          <p>When the hopper angle is high, it is very likely that the system exhibits <em>mass flow</em>, where the particles
-            exit the hopper in the order in which they were filled. In this regime the full bulk of particles slides
-            down the walls, as clearly visible in the DEM simulation, as well as, in the NeuralDEM trajectory. </p>
+          <p>
+            In the funnel flow regime particle layer inversion happens, i.e., particles from higher layers overtake 
+            particles from the lower layers through the funnel. This emerging macroscopic phenomena 
+            is perfectly modeled by NeuralDEM. </p>
         </div>
       </div>
       <div class="content is-max-desktop has-text-centered">
@@ -362,7 +362,7 @@
       </div>
       <div class="message is-info">
         <div class="message-body">
-          <p>Macroscopic simulation insights from the predicted occupancy field. The NeuralDEM model can accurately capture macroscopic measurements from the learned dynamics.</p>
+          <p>TODO(change) Macroscopic simulation insights from the predicted occupancy field. The NeuralDEM model can accurately capture macroscopic measurements from the learned dynamics.</p>
         </div>
       </div>
     </div>
