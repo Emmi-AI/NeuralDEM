@@ -327,15 +327,7 @@ modeled on a grid of 160k hexahedral cells
     </div>
 
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Fluidized bed: long term statistics</h2></div>
-    <div class="content has-text-justified">
-      <p>
-    A fluidized bed reactor simulation exhibits fast and transient dynamics with many physically pos-
-sible trajectories, i.e., fluidized bed reactor trajectories are chaotic. This means that – also for nu-
-merical solvers – starting a fluidized bed simulation with different initial particle packings will yield
-different trajectories. Still, in the limit of long simulation trajectories, different initial packings do
-not affect the temporal statistics.
-      </p>
-    </div>
+
 
     <div class="columns is-mobile is-max-desktop has-text-centered">
       <div class="column has-text-centered">
@@ -364,6 +356,13 @@ not affect the temporal statistics.
 <section class="section">
   <div class="container is-max-desktop">
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Fluidized bed: rollouts for different inlet velocity</h2></div>
+
+    <div class="content has-text-justified">
+      <p>
+    A fluidized bed reactor simulation exhibits fast and transient dynamics with many physically posible trajectories, i.e., fluidized bed reactor trajectories are chaotic. This means that – also for numerical solvers – starting a fluidized bed simulation with different initial particle packings will yield
+different trajectories. Still, in the limit of long simulation trajectories, different initial packings do not affect the temporal statistics.
+      </p>
+    </div>
     
     <!-- <div class="columns is-mobile is-centered has-text-centered">
       <div class="column is-half-desktop is-one-third-mobile">
@@ -429,7 +428,8 @@ not affect the temporal statistics.
     </div>  
     <div class="message is-info">
       <div class="message-body">
-        <p>The solid fraction is the ratio of volume which is occupied by particles, aka solids. When averaged over the entire volume this is effectively a mass conservation test. Here we see how NeuralDEM keep the same initial mass throughout the entire simulation, which lasts 28s or 2800 machine learning timesteps.</p>
+        <p>It is expected that there is no perfect agreement between NeuralDEM the CFD-DEM simulation, due to the chaotic behviour of the system. 
+          The structures of particles and the fluid field that arise for a specific inlet velocity  (visualized by the iso surface of solidraction)  are very well aligned between NeuralDEM and the CFD-DEM simulation.</p>
       </div>
     </div>
   </div>
@@ -437,7 +437,7 @@ not affect the temporal statistics.
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: mixing</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Fluidized bed: Particle mixing behavior</h2></div>
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4"></h2></div>
     <!-- <div class="columns is-mobile is-centered has-text-centered">
       <div class="column is-half-desktop is-one-third-mobile">
@@ -472,7 +472,6 @@ not affect the temporal statistics.
     </div>  
     <div class="message is-info">
       <div class="message-body">
-        <p><strong>Particle mixing</strong> behavior modeled by NeuralDEM.</p>
         <p>The slow inlet velocity simulation shows slow mixing, and NeuralDEM can match the same mixing rate (the two lines are overlapping). <em>Notice here that the purple particles appear at the bad of the fluidized bed towards the end of the simulation</em>.</p>
         <p>For high inlet velocity the particle mixing more quickly rises at the beginning, slowing down towards the end. The model matches the prediction very well.</p>
         <p>These simulations are run for 3s real-time (or 300 machine learning timesteps) and are here slowed-down to last 15s. Additionally, we want to note that the particle mixing is not a time-averaged statistic, so it is strongly dependent on the exact bubbles and position of the particles. We do not expect
