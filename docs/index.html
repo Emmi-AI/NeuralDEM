@@ -206,12 +206,12 @@ Additionally, auxiliary <em>off-branches</em> can be added to directly model mac
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Hopper: draining</h2></div>
+    <div class="content is-max-desktop has-text-centered"><h2 class="title is-3">Hopper: draining setting</h2></div>
     <div class="content has-text-justified">
           <p>
             Hoppers are industrially used for short as well as long term storage of particulate material, showcasing slow and pseudo-steady macroscopic behavior.
             DEM is the preferred method since the air around the particles can usually be neglected due to the slow velocities in the system.
-            In our experiments, the hopper geometry is filled with 250k particles, which gradually exit the domain over the simulation duration when the hopper empties.
+            In our experiments, the hopper geometry is filled with 250k particles, which gradually exit the domain over the simulation duration when the hopper empties. Based on the material properties and the geoemtry properties, different flow regimes are obtained in a hopper.
           </p>
     </div>
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Mass flow</h2></div>
@@ -232,7 +232,7 @@ Additionally, auxiliary <em>off-branches</em> can be added to directly model mac
     </div>
     <div class="message is-info">
       <div class="message-body">
-          <p>The hopper here has a high angle, which causes the system to exhibit mass flow, where the particles exit the hopper in the order in which they were filled.</p>
+          <p>When the hopper angle is high, it is very likly that the system exhibits mass flow, where the particles exit the hopper in the order in which they were filled. In this regime the full bulk of particles slides down the walls, as clearly visible in the DEM simulation, as well as, in the NeuralDEM trajectory. </p>
         </div>
       </div>
     <div class="content is-max-desktop has-text-centered"><h2 class="title is-4">Funnel flow</h2></div>
@@ -252,7 +252,8 @@ Additionally, auxiliary <em>off-branches</em> can be added to directly model mac
     </div>
     <div class="message is-info">
       <div class="message-body">
-        <p>With long angle, instead, the hopper causes mass flow. The particles at the top exit the hopper before those below them.</p>
+        <p>In contrast, when the hopper angle is very shallow it is likly that the hopper exhibits funnnel flow. Then the particles exit the hopper in the middle through a funnel built from the particles. 
+          This causes that particles at the top exit the hopper before those below them. In this cases there is hardly any sliding on the wall as shown by booth simulations</p>
       </div>
     </div>
   </div>
