@@ -2,6 +2,16 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.hidden-text {
+  color: white;
+  cursor:default;
+}
+
+.hidden-text:hover {
+  color: black;
+  cursor: default;
+}
+
 
 .footer .icon-link {
     font-size: 25px;
