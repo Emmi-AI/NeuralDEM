@@ -1,8 +1,8 @@
 # NeuralDEM
 
-[[`Project Page`](https://nx-ai.github.io/NeuralDEM)] 
+[[`Project Page`](https://emmi-ai.github.io/NeuralDEM)] 
 [[`Paper`](https://arxiv.org/abs/2411.09678)] 
-[[`BibTeX`](https://github.com/nx-ai/NeuralDEM#citation)]
+[[`BibTeX`](https://github.com/emmi-ai/NeuralDEM#citation)]
 
 # Citation
 
