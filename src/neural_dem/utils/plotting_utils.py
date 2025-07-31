@@ -346,3 +346,64 @@ def merge_pngs_to_gif(
         duration=100,
         loop=0,
     )
+
+
+def plot_fbed_statistics(
+    target: list[torch.Tensor],
+    prediction: list[torch.Tensor],
+    mode: Literal["mean", "std"],
+    name: str,
+    vmin: float,
+    vmax: float,
+    cmap: str = "magma",
+) -> None:
+    fig, axs = plt.subplots(ncols=2, figsize=(5, 5), constrained_layout=True)
+
+    stacked_target = torch.stack(target)
+    stacked_prediction = torch.stack(prediction)
+    if stacked_target.size(-1) == 3:
+        stacked_target = stacked_target.norm(dim=-1)
+        stacked_prediction = stacked_prediction.norm(dim=-1)
+
+    if mode == "mean":
+        target = stacked_target.mean(dim=0)
+        prediction = stacked_prediction.mean(dim=0)
+    elif mode == "std":
+        target = stacked_target.std(dim=0)
+        prediction = stacked_prediction.std(dim=0)
+    else:
+        raise NotImplementedError
+
+    # fluid voidfraction (plot center slice)
+    center_target = target[:, target.size(1) // 2]
+    center_prediction = prediction[:, prediction.size(1) // 2]
+    imshow = axs[0].imshow(
+        center_target.T,
+        origin="lower",
+        cmap=cmap,
+        vmin=vmin,
+        vmax=vmax,
+    )
+    axs[0].set_title("CFD-DEM", fontsize=20)
+    plt.colorbar(imshow, ax=axs[0])
+    imshow = axs[1].imshow(
+        center_prediction.T,
+        origin="lower",
+        cmap=cmap,
+        vmin=vmin,
+        vmax=vmax,
+    )
+    axs[1].set_title("NeuralDEM", fontsize=20)
+    plt.colorbar(imshow, ax=axs[1])
+    if mode == "mean":
+        fig.suptitle(f"Mean {name}", fontsize=30)
+    elif mode == "std":
+        fig.suptitle(f"Std dev. {name}", fontsize=30)
+    else:
+      raise NotImplementedError
+
+    # disable ticks
+    for ax in axs:
+        ax.set_xticks([])
+        ax.set_yticks([])
+    plt.show()
