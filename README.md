@@ -3,6 +3,8 @@
 [[`Project Page`](https://emmi-ai.github.io/NeuralDEM)] 
 [[`Paper`](https://arxiv.org/abs/2411.09678)] 
 [[`BibTeX`](https://github.com/emmi-ai/NeuralDEM#citation)]
+[[`Hopper Tutorial`](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)]
+[[`Fluidized Bed Tutorial`](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)]
 
 Run the tutorials direclty in google colab:
 - [hopper](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)
