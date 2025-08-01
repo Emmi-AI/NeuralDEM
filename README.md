@@ -7,8 +7,8 @@
 [[`Fluidized Bed Tutorial`](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)]
 
 Run the tutorials direclty in google colab:
-- [hopper](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)
-- [fluidized bed](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)
+- [Hopper](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)
+- [Fluidized bed](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)
 
 
 Implementation of [NeuralDEM](https://arxiv.org/abs/2411.09678) containing:
@@ -22,8 +22,8 @@ The implementation is accompanied with two tutorials notebook to showcase variou
 - Visualize model predictions
 
 We recommend to check it out yourself in an interactive google colab runtime:
-- [hopper](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)
-- [fluidized bed](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)
+- [Hopper](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)
+- [Fluidized bed](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)
 
 # Further resources
 
