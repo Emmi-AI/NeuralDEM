@@ -29,7 +29,7 @@ We recommend to check it out yourself in an interactive google colab runtime:
 
 The full dataset is available upon request to [data@emmi.ai](data@emmi.ai).
 
-A single simulation from the testset can be found on [huggingface](https://huggingface.co/EmmiAI/NeuralDEM), which are used for the colab notebooks.
+A single simulation from the testset can be found on [huggingface](https://huggingface.co/EmmiAI/NeuralDEM/tree/main/data), which are used for the colab notebooks.
 
 # Further resources
 
