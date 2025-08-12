@@ -25,6 +25,10 @@ We recommend to check it out yourself in an interactive google colab runtime:
 - [Hopper](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_hopper.ipynb)
 - [Fluidized bed](https://colab.research.google.com/github/Emmi-AI/NeuralDEM/blob/main/tutorial_fluidized_bed.ipynb)
 
+# Full dataset
+
+The full dataset is available upon request to [data@emmi.ai](data@emmi.ai).
+
 # Further resources
 
 If our work sparked your interest, check out our other works and resources!
